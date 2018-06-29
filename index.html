@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    body {
+      background: black;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+    webview {
+      height: 100px;
+      width: 200px;
+      border: 1px solid black;
+    }
+    webview:active {
+      border-right: 5px solid yellow;
+    }
+  </style>
+  <body>
+  <webview id="webview" src="./webview-index.html"></webview>
+  <webview id="webview2" src="./webview-index.html"></webview>
+  </body>
+<script>
+  setTimeout(() => {
+	  document.getElementById("webview").openDevTools();
+	  document.getElementById("webview2").openDevTools();
+  }, 100);
+</script>
+</html>
